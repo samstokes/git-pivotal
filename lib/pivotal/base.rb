@@ -25,7 +25,7 @@ module Pivotal
     end
     
     def method_missing(method, *args)
-      parsed_resource.css(method.to_s).text
+      parsed_resource.xpath("*/" + method.to_s).text
     end
     
     def update_attributes(options = {})

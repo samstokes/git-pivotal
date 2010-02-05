@@ -12,6 +12,11 @@ def demo_xml
   Builder::XmlMarkup.new.project do |project|
     project.id 1
     project.name "Demo Project"
+    project.memberships do |memberships|
+      memberships.membership do |membership|
+        membership.id 42
+      end
+    end
   end
 end
 

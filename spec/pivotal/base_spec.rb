@@ -24,6 +24,10 @@ describe Pivotal::Base do
     @base.should_not respond_to(:name)
     @base.name.should == "Demo Project"
   end
+
+  it "should only return immediate children for undefined methods" do
+    @base.id.should == "1"
+  end
   
   it "should present the class's item xpath" do
     @base.class.xpath.should == "//api"

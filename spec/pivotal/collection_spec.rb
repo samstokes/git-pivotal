@@ -22,5 +22,11 @@ describe Pivotal::Collection do
   it "should return items with correct ids" do
     @api.projects.find(1).id.should == "1"
   end
+
+  it "should return items with correct resource URLs" do
+    @api.projects.find(:all).each do |project|
+      project.resource.url.split("/").last.should == project.id
+    end
+  end
   
 end

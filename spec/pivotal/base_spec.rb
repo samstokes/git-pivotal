@@ -21,8 +21,8 @@ describe Pivotal::Base do
   end
   
   it "should forward undefined methods to the XML parse tree" do
-    @base.should_not respond_to(:id)
-    @base.id.should == "1"
+    @base.should_not respond_to(:name)
+    @base.name.should == "Demo Project"
   end
   
   it "should present the class's item xpath" do

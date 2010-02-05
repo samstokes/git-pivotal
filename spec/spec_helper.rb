@@ -11,6 +11,7 @@ end
 def demo_xml
   Builder::XmlMarkup.new.project do |project|
     project.id 1
+    project.name "Demo Project"
   end
 end
 
